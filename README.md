@@ -35,9 +35,9 @@ A *Datapoint* having a ***DatapointState*** enum of either *Active*, or *Dropped
 ## Notes from Testing
 
 - Querying a table of 50k datapoints, into a results set of ~2.5k takes 1.1s. Which is very good performance, and is also seen with "DELETE * MATCHING", then "SELECT * MATCHING OTHER" test. Which adds two queries, dropping of thousands of records, and re-indexing the table. 
-- While the construction of ~5M Model classes takes ~3.35, their conversion to Datapoints freeze computer.
-- Highlights interesting point of roles given that reflection is expensive, in that the Database will never be doing this. 
-- Only clients, or REST-API. Where the REST-API will also have to battle the incoming traffic.
+- While the construction of ~5M Model classes takes ~3.35, their conversion to Datapoints froze my local computer.
+- Highlights interesting point of roles given that reflection is expensive, as Database will never be doing this (i.e will only ever know what a Datapoint is). 
+- Only clients, or a REST-API, will convert a Model class to a Datapoint, and vice versa. Where the REST-API will also have to battle the incoming traffic. Independantly these actions maybe fine, but maybe not together in a high traffic environment (testing separately in "*https://github.com/BrenKenna/DevOps-CCT*").
 - What is also interesting, is that similar action will be taken even with more optimized libs like mongos POJO codec.
 - Can also imagine that these actions could occur alongside say "SELECT *" queries.
 - Where in a high traffic evironment, it would be useful to separate the concerns of the "Write Path" and the "Read Path".
