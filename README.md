@@ -25,8 +25,19 @@ A *Datapoint* having a ***DatapointState*** enum of either *Active*, or *Dropped
 ## Development State
 
 - Core packages developed and tested. Output from JUnit tests provided as a text file in this repo, see "*Package-Test-Results.txt*".
-- Adding (should be abstract, where for table its appended to Index, and Datapoint list), dropping (by query) and the update (method input of field, new value, overloaded method using index in array) of rows can be revisited with the recent addition of a DatapointState.
+- Updating of fields (method input of field, new value, overloaded method using index in array) of rows can be revisited with the recent addition of a DatapointState.
 - A "Persistence" supporting storage as Gzipped JSON files needs to developed (others looked at laterz). Can look any inconveniences with using this library in an application after (ex REST-API). As the project will at some point would look better being refactored into a "core", "client", "server", and "persistence" like structure. But the current form is fine for now given the stage in developement (ie core & client).
 - A parallel Stream can be used to create the Map-String, BinarySearchTree used to construct the Index for a Table (continue to note other oppurtunities).
 - Model subclasses not tested.
 - With the project structure in place can look at the use of internal IDs (UUID, and timestamp), noting additional considerations for "Database/Table Chores".
+
+
+## Notes from Testing
+
+- Querying a table of 50k datapoints, into a results set of ~2.5k takes 1.1s. Which is very good performance, and is also seen with "DELETE * MATCHING", then "SELECT * MATCHING OTHER" test. Which adds two queries, dropping of thousands of records, and re-indexing the table. 
+- While the construction of ~5M Model classes takes ~3.35, their conversion to Datapoints freeze computer.
+- Highlights interesting point of roles given that reflection is expensive, in that the Database will never be doing this. 
+- Only clients, or REST-API. Where the REST-API will also have to battle the incoming traffic.
+- What is also interesting, is that similar action will be taken even with more optimized libs like mongos POJO codec.
+- Can also imagine that these actions could occur alongside say "SELECT *" queries.
+- Where in a high traffic evironment, it would be useful to separate the concerns of the "Write Path" and the "Read Path".
