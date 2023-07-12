@@ -1,0 +1,678 @@
+
+
+---------------- Binary Search Tree Tests ----------------
+
+
+====== BST: Properties Tests ======
+
+Constructed Datasets:
+
+Dataset Size = 40
+BST Size = 40
+BST Dupes = 26
+Asserting sizes equal
+Created dataset is :	true
+Created dataset index is valid:	true
+Test Passed:	true
+
+====== BST: Properties Tests ======
+
+
+
+---------------- Binary Search Tree Tests ----------------
+
+
+====== BST: Query Tests ======
+
+Testing whether Tree contains test name:	Doe
+Name test successful contains output from BST:	true
+
+====== BST: Query Tests ======
+
+
+
+---------------- Binary Search Tree Tests ----------------
+
+
+====== BST: Allow Duplicates Tests ======
+
+Testing query of all records matching the same:	Ziff
+Displaying results for all names matching term:	6
+
+IndexEntry{primaryKey=0, data=Ziff, dataType=String, left=IndexEntry{primaryKey=1, data=Bond, dataType=String, left=IndexEntry{primaryKey=2, data=Baggins, dataType=String, left=null, right=IndexEntry{primaryKey=14, data=Bakker, dataType=String, left=null, right=IndexEntry{primaryKey=18, data=Bathory, dataType=String, left=null, right=null,equalNodes=3},equalNodes=2},equalNodes=2}, right=IndexEntry{primaryKey=4, data=Jones, dataType=String, left=IndexEntry{primaryKey=9, data=Burns, dataType=String, left=null, right=IndexEntry{primaryKey=10, data=East, dataType=String, left=IndexEntry{primaryKey=13, data=Collins, dataType=String, left=null, right=IndexEntry{primaryKey=28, data=Doe, dataType=String, left=null, right=null,equalNodes=1},equalNodes=0}, right=IndexEntry{primaryKey=15, data=Hamilton, dataType=String, left=null, right=IndexEntry{primaryKey=27, data=Harris, dataType=String, left=null, right=null,equalNodes=1},equalNodes=1},equalNodes=2},equalNodes=1}, right=IndexEntry{primaryKey=5, data=Montgomery, dataType=String, left=null, right=IndexEntry{primaryKey=7, data=Sizlack, dataType=String, left=IndexEntry{primaryKey=30, data=Simpson, dataType=String, left=null, right=null,equalNodes=1}, right=IndexEntry{primaryKey=12, data=Skywalker, dataType=String, left=null, right=null,equalNodes=2},equalNodes=2},equalNodes=1},equalNodes=2},equalNodes=0}, right=null,equalNodes=5}
+IndexEntry{primaryKey=3, data=Ziff, dataType=String, left=null, right=null,equalNodes=0}
+IndexEntry{primaryKey=11, data=Ziff, dataType=String, left=null, right=null,equalNodes=0}
+IndexEntry{primaryKey=35, data=Ziff, dataType=String, left=null, right=null,equalNodes=0}
+IndexEntry{primaryKey=40, data=Ziff, dataType=String, left=null, right=null,equalNodes=0}
+IndexEntry{primaryKey=41, data=Ziff, dataType=String, left=null, right=null,equalNodes=0}
+
+
+Comparing results to a linear search
+Queried Index of '0', Equals Linear Search Index of '0'
+
+====== BST: Allow Duplicates Tests ======
+
+
+
+---------------- Binary Search Tree Tests ----------------
+
+
+====== BST: Parent Lookup Tests ======
+
+Fetching parent node for testQuery:	Baggins
+Test successful Child is Root Node:	LEFT
+
+====== BST: Parent Lookup Tests ======
+
+
+
+---------------- Binary Search Tree Tests ----------------
+
+
+====== BST: Parent Child Placement Tests ======
+
+Determining where the matchingNode places on the parent:	LEFT
+Comparing values:
+
+MatchingNode = East
+ValueFromParent = East
+
+Succesfully queried Child Node from Parent given Placement:	LEFT
+
+====== BST: Parent Child Placement Tests ======
+
+
+
+---------------- Converter Tests: Datapoint From Model ----------------
+
+
+============== Model to Datapoint: ModelDatapointBridge Test ==============
+
+Created Person for Import:
+
+Person{fName=Elizabeth, lName=Berkhiem, mNameInitial=B, state=false, age=21}
+
+Testing fetching of ModelDatapointBridge
+
+Printing Data Bridge:
+
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Elizabeth}, setter=null, getter=public java.lang.String exampleModel_Tests.model.Person.getfName(), ref=Elizabeth, canonicalClass=class java.lang.Class}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Berkhiem}, setter=null, getter=public java.lang.String exampleModel_Tests.model.Person.getlName(), ref=Berkhiem, canonicalClass=class java.lang.Class}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=B}, setter=null, getter=public char exampleModel_Tests.model.Person.getmNameInitial(), ref=B, canonicalClass=class java.lang.Class}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=21}, setter=null, getter=public int exampleModel_Tests.model.Person.getAge(), ref=21, canonicalClass=class java.lang.Class}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=false}, setter=null, getter=public boolean exampleModel_Tests.model.Person.getState(), ref=false, canonicalClass=class java.lang.Class}
+Test status:	true
+
+============== Model to Datapoint: ModelDatapointBridge Test ==============
+
+
+
+---------------- Converter Tests: Datapoint From Model ----------------
+
+
+============== Model to Datapoint: Conversion Test ==============
+
+
+Created Person for Import:
+
+Person{fName=Michelle, lName=Ziff, mNameInitial=Z, state=true, age=29}
+
+Created Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={lName=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Ziff}, fName=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Michelle}, mNameInitial=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=Z}, state=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=true}, age=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=29}}}
+
+Test status:	true
+
+============== Model to Datapoint: Conversion Test ==============
+
+
+
+---------------- Converter Tests: Datapoint From Model ----------------
+
+
+============== Model to Datapoint: Alias Update Test ==============
+
+
+Created Person for Import:
+
+Person{fName=Sarah, lName=East, mNameInitial=E, state=false, age=57}
+
+Created Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={lName=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=East}, fName=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Sarah}, mNameInitial=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=E}, state=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=false}, age=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=57}}}
+
+Updating Datapoint Aliases
+
+Attribute Recieved for 'Last Name':
+
+ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=East}
+
+Test status:	true
+
+============== Model to Datapoint: Alias Update Test ==============
+
+
+
+---------------- Converter Tests: Model From Datapoint ----------------
+
+
+============== Datapoint to Model: ModelDatapointBridge Test ==============
+
+Created Person for Import:
+
+Person{fName=Peter, lName=Sizlack, mNameInitial=S, state=false, age=37}
+Created Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={lName=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Sizlack}, fName=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Peter}, mNameInitial=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=S}, state=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=false}, age=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=37}}}
+
+Testing fetching of ModelDatapointBridge
+
+Printing Data Bridge:
+
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Sizlack}, setter=public void exampleModel_Tests.model.Person.setlName(java.lang.String), getter=null, ref=Sizlack, canonicalClass=class exampleModel_Tests.model.Person}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Peter}, setter=public void exampleModel_Tests.model.Person.setfName(java.lang.String), getter=null, ref=Peter, canonicalClass=class exampleModel_Tests.model.Person}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=S}, setter=public void exampleModel_Tests.model.Person.setmNameInitial(char), getter=null, ref=S, canonicalClass=class exampleModel_Tests.model.Person}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=false}, setter=public void exampleModel_Tests.model.Person.setState(boolean), getter=null, ref=false, canonicalClass=class exampleModel_Tests.model.Person}
+ModelDatapointBridge{modelAttrib=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=37}, setter=public void exampleModel_Tests.model.Person.setAge(int), getter=null, ref=37, canonicalClass=class exampleModel_Tests.model.Person}
+Test status:	true
+
+============== Datapoint to Model: ModelDatapointBridge Test ==============
+
+
+
+---------------- Converter Tests: Model From Datapoint ----------------
+
+
+============== Datapoint to Model: Model From Datapoint Test ==============
+
+Created Person for Import:
+
+Person{fName=Jane, lName=Collins, mNameInitial=C, state=true, age=20}
+
+Created Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={lName=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Collins}, fName=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Jane}, mNameInitial=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=C}, state=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=true}, age=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=20}}}
+Person{fName=Jane, lName=Collins, mNameInitial=C, state=true, age=20}
+
+Comparing properties of Reflected Person:
+
+Person{fName=Jane, lName=Collins, mNameInitial=C, state=true, age=20}
+
+First Name Match:		true
+Last Name Match:		true
+Middle Initial Match:	true
+Age Match:		true
+State Match:		true
+
+Test status:	true
+
+============== Datapoint to Model: Model From Datapoint Test ==============
+
+
+
+---------------- Converter Tests: Model From Datapoint ----------------
+
+
+============== Datapoint to Model: Conversion to Model Test ==============
+
+Created Person for Import:
+
+Person{fName=Danielle, lName=Montgomery, mNameInitial=M, state=true, age=26}
+
+Created Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={lName=ModelAttribute{attribName=lName, alias=lName, attribDataType=String, attribValue=Montgomery}, fName=ModelAttribute{attribName=fName, alias=fName, attribDataType=String, attribValue=Danielle}, mNameInitial=ModelAttribute{attribName=mNameInitial, alias=mNameInitial, attribDataType=Character, attribValue=M}, state=ModelAttribute{attribName=state, alias=state, attribDataType=Boolean, attribValue=true}, age=ModelAttribute{attribName=age, alias=age, attribDataType=Integer, attribValue=26}}}
+
+Reflected Datapoint back into Person:
+
+Person{fName=Danielle, lName=Montgomery, mNameInitial=M, state=true, age=26}
+
+Test status:	true
+
+============== Datapoint to Model: Conversion to Model Test ==============
+
+
+
+---------------- DataType Tests ----------------
+
+
+====== Testing String Type ======
+
+Testing if String is valid: true
+Index of String type is: 0
+Enum value at that String is: String
+Distance from 'abc', to 'def' is: 3
+Distance from 'def', to 'abc' is: -3
+
+====== Testing String Type ======
+
+
+
+====== Testing Int Type ======
+
+Testing if Int is valid: true
+Index of Int type is: 1
+Enum value at that Int is: Integer
+Distance from '8', to '20' is: 12
+Distance from '20', to '8' is: -12
+
+====== Testing Int Type ======
+
+
+====== Testing Double Type ======
+
+Testing if Double is valid: true
+Index of Double type is: 2
+Enum value at that Double is: Double
+Distance from '8.2', to '20.8' is: 12
+Distance from '20.8', to '8.2' is: -12
+
+====== Testing Double Type ======
+
+
+
+====== Testing Boolean Type ======
+
+Testing if Boolean is valid: true
+Index of Boolean type is: 4
+Enum value at that Boolean is: Boolean
+Distance from 'false', to 'true' is: 1
+Distance from 'true', to 'false' is: -1
+
+====== Testing Boolean Type ======
+
+
+
+====== Testing Character Type ======
+
+Testing if Character is valid: true
+Index of Character type is: 3
+Enum value at that Character is: Character
+Distance from '#', to '9' is: 22
+Distance from '9', to '#' is: -22
+
+====== Testing Character Type ======
+
+
+
+---------------- Dataset Drop/Remove Tests ----------------
+
+
+================ Dataset-Drop/Remove: Results Drop View ================
+
+
+Created dataset for testing
+
+Querying first record of data into a Results-Dataset:
+
+
+Displaying stats for 'Result' Dataset:	null
+Dataset Size:				18
+Dataset Active Size:			18
+Dataset Dropped Size:			0
+
+Summarizing Same Query Following First Record Drop
+
+Displaying stats for 'Result' Dataset:	null
+Dataset Size:				17
+Dataset Active Size:			17
+Dataset Dropped Size:			0
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			499
+Dataset Dropped Size:			1
+
+Verifying Size Metrics Following Drop
+Size of Results before Drop:	18
+Size after:			17
+Size after == size before less 1:	true
+
+Test status:	true
+
+
+================ Dataset-Drop/Remove: Results Drop View ================
+
+
+
+---------------- Dataset Drop/Remove Tests ----------------
+
+
+================ Dataset-Drop/Remove: Table Restore Drop Test ================
+
+
+Created dataset for testing, displaying size metrics
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Dropping first record from View:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Dropped, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=S}, State=ModelAttribute{attribName=state, alias=State, attribDataType=Boolean, attribValue=false}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Sarah}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Skywalker}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=30}}}
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			499
+Dataset Dropped Size:			1
+
+Restoring Record:
+
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Verifying the Size Metrics Following Restoration
+Verifying Size After == Size Before:	true
+Veriying that the Dropped Size is 0:	true
+
+Test status:	true
+
+
+================ Dataset-Drop/Remove: Table Restore Drop Test ================
+
+
+
+---------------- Dataset Drop/Remove Tests ----------------
+
+
+================ Dataset-Drop/Remove: Table Drop Test ================
+
+
+Created dataset for testing, displaying size metrics
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Dropping first record from View:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Dropped, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=D}, State=ModelAttribute{attribName=state, alias=State, attribDataType=Boolean, attribValue=false}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Amy}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Doe}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=52}}}
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			499
+Dataset Dropped Size:			1
+
+Checking Active size after, is less 1:	true
+Checking Dropped size is 1:		true
+
+Test status:	true
+
+
+================ Dataset-Drop/Remove: Table Drop Test ================
+
+
+
+---------------- Dataset Drop/Remove Tests ----------------
+
+
+================ Dataset-Drop/Remove: Restore Dropped from Query, Results View ================
+
+
+Created dataset for testing
+
+Querying first record of data into a Results-Dataset:
+
+
+Displaying stats for 'Result' Dataset:	null
+Dataset Size:				18
+Dataset Active Size:			18
+Dataset Dropped Size:			0
+
+Fetching Table View after Dropping all Records matching first name
+Drop state:	true
+
+Restoring deleted datapoints:
+
+Restore state:	true
+
+Displaying stats for 'Result' Dataset:	null
+Dataset Size:				18
+Dataset Active Size:			18
+Dataset Dropped Size:			0
+
+Verifying Restoration Metrics:
+Size of Results before Drop:	18
+Size after:			0
+Size following restoration:	18
+Restored size == size Before:	true
+
+Test status:	true
+
+
+================ Dataset-Drop/Remove: Restore Dropped from Query, Results View ================
+
+
+
+---------------- Dataset Drop/Remove Tests ----------------
+
+
+================ Dataset-Drop/Remove: Results Drop from Query View ================
+
+
+Created dataset for testing
+
+Querying first record of data into a Results-Dataset:
+
+
+Displaying stats for 'Result' Dataset:	null
+Dataset Size:				37
+Dataset Active Size:			37
+Dataset Dropped Size:			0
+
+Fetching Table View after Dropping all Records matching first name
+Drop state:	true
+
+Verifying Size Metrics Following Drop
+Size of Results before Drop:	37
+Size after:			0
+Size after is 0:			true
+
+Test status:	true
+
+
+================ Dataset-Drop/Remove: Results Drop from Query View ================
+
+
+
+---------------- Dataset Insertion Tests ----------------
+
+
+================ Dataset-Insertion: Extend Table ================
+
+
+Created dataset for testing, displaying size metrics
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Extending Dataset with an Additional 30 records
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				530
+Dataset Active Size:			530
+Dataset Dropped Size:			0
+
+Verifying size after is 30 higher than before:	true
+
+Test status:	true
+
+
+================ Dataset-Insertion: Extend Table ================
+
+
+
+---------------- Dataset Insertion Tests ----------------
+
+
+================ Dataset-Insertion: Add Single Record ================
+
+
+Created dataset for testing, displaying size metrics
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Created new person record for insertion:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=C}, State=ModelAttribute{attribName=iState, alias=State, attribDataType=Boolean, attribValue=true}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Sarah}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Collins}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=52}}}
+
+New record insertion state:	true
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				501
+Dataset Active Size:			501
+Dataset Dropped Size:			0
+
+Test status:	true
+
+
+================ Dataset-Insertion: Add Single Record ================
+
+
+
+---------------- Dataset Insertion Tests ----------------
+
+
+================ Dataset-Insertion: Index Sizes ================
+
+
+Created dataset for testing, displaying size metrics
+
+Displaying stats for 'Table' Dataset:	Person
+Dataset Size:				500
+Dataset Active Size:			500
+Dataset Dropped Size:			0
+
+Displaying the Size of BST after Insertion:
+Size of 'Middle Initial' tree after insertion:	501
+Size of 'State' tree after insertion:	501
+Size of 'First Name' tree after insertion:	501
+Size of 'Last Name' tree after insertion:	501
+Size of 'Age' tree after insertion:	501
+
+Test status:	true
+
+
+================ Dataset-Insertion: Index Sizes ================
+
+
+
+---------------- Dataset Tests ----------------
+
+
+================ Dataset-Construction: Table Dataset Test ================
+
+
+Creating random data
+
+Creating Dataset from Person Datapoint List:	N=30
+Dataset created successfully, displaying properties:
+
+Dataset Type:		Table
+Datapoint Counter:	30
+Datapoint Active:		30
+Datapoint Dropped:	0
+Expected Size:		30
+First Record:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=J}, State=ModelAttribute{attribName=state, alias=State, attribDataType=Boolean, attribValue=true}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Harry}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Jones}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=48}}}
+
+Validating Size metrics
+
+Test status:	true
+
+
+================ Dataset-Construction: Table Test ================
+
+
+
+---------------- Dataset Tests ----------------
+
+
+================ Dataset-Query: Table Dataset Test ================
+
+
+Creating random data
+
+Creating Dataset from Person Datapoint List:	N=50000
+
+Testing Table Queries on Element at Index:	12045
+
+Datapoint Data:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=M}, State=ModelAttribute{attribName=state, alias=State, attribDataType=Boolean, attribValue=true}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Michael}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Montgomery}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=11}}}
+
+Queried 'First Name' of 'Michael' results:	 N = 2252
+
+Query Time Taken:	1.1289000064134598
+Scan Time Taken:	13.154600001871586
+Speed Up:		11.652582095082133
+
+Test status:	true
+
+
+================ Dataset-Query: Table Test ================
+
+
+
+---------------- Dataset Tests ----------------
+
+
+================ Dataset-Construction: Results Test ================
+
+Dataset created successfully, displaying properties:
+
+Dataset Type:		Result
+Datapoint Counter:	30
+Datapoint Active:		30
+Datapoint Dropped:	0
+Expected Size:		30
+First Record:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=Z}, State=ModelAttribute{attribName=iState, alias=State, attribDataType=Boolean, attribValue=true}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Danielle}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Ziff}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=49}}}
+
+Validating Size metrics
+
+Test status:	true
+
+
+================ Dataset-Construction: Results Dataset Test ================
+
+
+
+---------------- Model Tests ----------------
+
+Constructed a exampleModel_Tests.model.Square:
+
+Square{length=10, width=10, area=100.0}
+
+Testing Object reference of Square matches original:	true
+Constructed a exampleModel_Tests.model.Person:
+
+Person{fName=Tim, lName=Bond, mNameInitial=B, state=true, age=2}
+
+Displaying Object reference for myPerson: exampleModel_Tests.model.Person
+
+
+---------------- Model Tests ----------------
+
+Create Datapoint from Square:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Square, state=Active, datapoint={Area=ModelAttribute{attribName=area, alias=Area, attribDataType=Double, attribValue=169.0}, Length=ModelAttribute{attribName=length, alias=Length, attribDataType=Integer, attribValue=13}, Width=ModelAttribute{attribName=width, alias=Width, attribDataType=Integer, attribValue=13}}}
+
+
+---------------- Model Tests ----------------
+
+Create Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=B}, State=ModelAttribute{attribName=iState, alias=State, attribDataType=Boolean, attribValue=false}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Martina}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Bond}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=37}}}

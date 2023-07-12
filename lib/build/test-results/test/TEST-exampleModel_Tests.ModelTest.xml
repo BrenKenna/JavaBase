@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="exampleModel_Tests.ModelTest" tests="4" skipped="1" failures="0" errors="0" timestamp="2023-07-05T15:06:06" hostname="LAPTOP-SL02RC0C" time="8.335">
+  <properties/>
+  <testcase name="testModels()" classname="exampleModel_Tests.ModelTest" time="0.059"/>
+  <testcase name="testDatapoint_Square()" classname="exampleModel_Tests.ModelTest" time="0.018"/>
+  <testcase name="testDatapoint_Person()" classname="exampleModel_Tests.ModelTest" time="0.002"/>
+  <testcase name="makeFiveMillion_Test()" classname="exampleModel_Tests.ModelTest" time="8.248">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[
+
+---------------- Model Tests ----------------
+
+Constructed a exampleModel_Tests.model.Square:
+
+Square{length=21, width=21, area=441.0}
+
+Testing Object reference of Square matches original:	true
+Constructed a exampleModel_Tests.model.Person:
+
+Person{fName=Alex, lName=Sizlack, mNameInitial=S, state=false, age=57}
+
+Displaying Object reference for myPerson: exampleModel_Tests.model.Person
+
+
+---------------- Model Tests ----------------
+
+Create Datapoint from Square:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Square, state=Active, datapoint={Area=ModelAttribute{attribName=area, alias=Area, attribDataType=Double, attribValue=100.0}, Length=ModelAttribute{attribName=length, alias=Length, attribDataType=Integer, attribValue=10}, Width=ModelAttribute{attribName=width, alias=Width, attribDataType=Integer, attribValue=10}}}
+
+
+---------------- Model Tests ----------------
+
+Create Datapoint from Person:
+
+Datapoint{canonicalClass=exampleModel_Tests.model.Person, state=Active, datapoint={Middle Initial=ModelAttribute{attribName=mNameInitial, alias=Middle Initial, attribDataType=Character, attribValue=C}, State=ModelAttribute{attribName=iState, alias=State, attribDataType=Boolean, attribValue=false}, First Name=ModelAttribute{attribName=fName, alias=First Name, attribDataType=String, attribValue=Martin}, Last Name=ModelAttribute{attribName=lName, alias=Last Name, attribDataType=String, attribValue=Collins}, Age=ModelAttribute{attribName=age, alias=Age, attribDataType=Integer, attribValue=35}}}
+
+
+---------------- Model Tests ----------------
+
+
+Testing time taken for creating list of 5M Persons
+
+Creating Person List:	N = 5000000
+Start Time (ms):		7.84829616918E7
+End Time (ms):		7.84866146481E7
+Time taken (s):		3.6529563000053167
+
+Testing time taken for converting Person list
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
