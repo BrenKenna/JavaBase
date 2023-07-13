@@ -25,19 +25,30 @@ A *Datapoint* having a ***DatapointState*** enum of either *Active*, or *Dropped
 ## Development State
 
 - Core packages developed and tested. Output from JUnit tests provided as a text file in this repo, see "*Package-Test-Results.txt*".
+
 - Updating of fields (method input of field, new value, overloaded method using index in array) of rows can be revisited with the recent addition of a DatapointState.
-- A "Persistence" supporting storage as Gzipped JSON files needs to developed (others looked at laterz). Can look any inconveniences with using this library in an application after (ex REST-API). As the project will at some point would look better being refactored into a "core", "client", "server", and "persistence" like structure. But the current form is fine for now given the stage in developement (ie core & client).
+
+- Persistence in the form of gzipped tables can use code from "*[[BrenKenna-JsonPersistence]](https://github.com/BrenKenna/JsonPersistence)*"
+
 - A parallel Stream can be used to create the Map-String, BinarySearchTree used to construct the Index for a Table (continue to note other oppurtunities).
+
 - Model subclasses not tested.
+
 - With the project structure in place can look at the use of internal IDs (UUID, and timestamp), noting additional considerations for "Database/Table Chores".
 
 
 ## Notes from Testing
 
 - Querying a table of 50k datapoints, into a results set of ~2.5k takes 1.1s. Which is very good performance, and is also seen with "DELETE * MATCHING", then "SELECT * MATCHING OTHER" test. Which adds two queries, dropping of thousands of records, and re-indexing the table. 
+
 - While the construction of ~5M Model classes takes ~3.35, their conversion to Datapoints froze my local computer.
+
 - Highlights interesting point of roles given that reflection is expensive, as Database will never be doing this (i.e will only ever know what a Datapoint is). 
-- Only clients, or a REST-API, will convert a Model class to a Datapoint, and vice versa. Where the REST-API will also have to battle the incoming traffic. Independantly these actions maybe fine, but maybe not together in a high traffic environment (testing separately in "*https://github.com/BrenKenna/DevOps-CCT*").
+
+- Only clients, or a REST-API, will convert a Model class to a Datapoint, and vice versa. Where the REST-API will also have to battle the incoming traffic. Independantly these actions maybe fine, but maybe not together in a high traffic environment (testing separately in "*[BrenKenna-DevOps](https://github.com/BrenKenna/DevOps-CCT)*").
+
 - What is also interesting, is that similar action will be taken even with more optimized libs like mongos POJO codec.
+
 - Can also imagine that these actions could occur alongside say "SELECT *" queries.
+
 - Where in a high traffic evironment, it would be useful to separate the concerns of the "Write Path" and the "Read Path".
