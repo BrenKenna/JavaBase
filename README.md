@@ -28,7 +28,7 @@ A *Datapoint* having a ***DatapointState*** enum of either *Active*, or *Dropped
 
 - Updating of fields (method input of field, new value, overloaded method using index in array) of rows can be revisited with the recent addition of a DatapointState.
 
-- Persistence in the form of gzipped tables can use code from "*[[BrenKenna-JsonPersistence]](https://github.com/BrenKenna/JsonPersistence)*"
+- Persistence in the form of gzipped tables can use code from "*[BrenKenna-JsonPersistence](https://github.com/BrenKenna/JsonPersistence)*"
 
 - A parallel Stream can be used to create the Map-String, BinarySearchTree used to construct the Index for a Table (continue to note other oppurtunities).
 
